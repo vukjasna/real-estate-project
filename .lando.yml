@@ -1,0 +1,24 @@
+name: website-abcd
+recipe: drupal9
+config:
+  php: '7.3'
+  via: apache:2
+  webroot: web
+  xdebug: false
+
+proxy:
+  appserver:
+    - website-abcd.lndo.site
+  pma:
+    - pma.website-abcd.lndo.site
+
+services:
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
+
+tooling:
+  domain-config:
+    service: appserver
+    cmd: cd $LANDO_MOUNT && drush cim --partial --source=$LANDO_MOUNT/config/lando -y
