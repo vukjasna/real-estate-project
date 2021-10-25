@@ -1,0 +1,20 @@
+name: Real Estate
+type: theme
+description: A theme for Real Estate
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+screenshot: screenshot.png
+
+regions:
+  header: Header
+  primary_menu: Main navigation
+  banner: Banner
+  front: Front page
+  content: Content
+  left_sidebar: Left sidebar
+  right_sidebar: Right sidebar
+  footer: Footer
+  copyright: Copyright
+
+libraries:
+  - realstate/realstate-css

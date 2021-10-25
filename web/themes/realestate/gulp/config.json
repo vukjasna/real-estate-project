@@ -1,0 +1,28 @@
+{
+  "messages": {
+    "error": {
+      "title": "Error",
+      "message": "Gulp reported error: <%= error.message %>!"
+    },
+    "success": {
+      "title": "Success",
+      "message": "Gulp tasks completed successfully!"
+    }
+  },
+  "sass": {
+    "src": "../scss/**/*.scss",
+    "destination": "../src/css",
+    "sourcemaps": "../css",
+    "config": {
+      "style": "compressed",
+      "errLogToConsole": true,
+      "includePaths": []
+    },
+    "browsers": [
+      "last 2 versions",
+      "> 1%",
+      "ie 9",
+      "ie 10"
+    ]
+  }
+}

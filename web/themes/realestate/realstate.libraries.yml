@@ -1,0 +1,8 @@
+realstate-css:
+  css:
+    base:
+      css/base/base.css: {}
+    components:
+      css/components/components.css: {}
+    layout:
+      css/layout/layout.css: {}
