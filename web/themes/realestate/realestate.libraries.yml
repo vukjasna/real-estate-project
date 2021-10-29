@@ -1,0 +1,4 @@
+realestate-css:
+  css:
+    theme:
+      src/css/styles.css: {}

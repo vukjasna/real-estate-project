@@ -9,7 +9,6 @@ regions:
   header: Header
   primary_menu: Main navigation
   banner: Banner
-  front: Front page
   content: Content
   left_sidebar: Left sidebar
   right_sidebar: Right sidebar
@@ -17,4 +16,4 @@ regions:
   copyright: Copyright
 
 libraries:
-  - realstate/realstate-css
+  - realestate/realestate-css

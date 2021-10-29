@@ -1,0 +1,48 @@
+header {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 13px 0;
+
+    #search-block-form {
+        flex-flow: row-reverse nowrap;
+        align-items: center;
+    }
+
+    fieldset {
+        border-width: 0;
+    }
+
+    .form-search {
+        border-color: $titleColor;
+        border-width: 1px;
+        padding: 0 15px;
+        height: 30px;
+        margin-left: 10px;
+    }
+}
+
+.contact {
+    width: 60%;
+    .field {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        &__info {
+            flex-direction: column;
+            margin-left: 20px;
+        }    
+    }
+    
+    .paragraph{
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        margin-bottom:0;
+    }
+}

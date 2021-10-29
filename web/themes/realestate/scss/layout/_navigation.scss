@@ -1,0 +1,17 @@
+.navbar {
+    background-color: transparentize($color: $titleColor, $amount: 0.1);
+    a {
+        color:white;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding:19px;
+        display: block
+    }
+    .nav {
+        width: 46%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
