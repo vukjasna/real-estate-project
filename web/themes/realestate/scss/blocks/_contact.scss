@@ -1,0 +1,37 @@
+.contact {
+    &--header {
+        width: 60%;
+
+        .field {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            &__info {
+                flex-direction: column;
+                margin-left: 20px;
+            }    
+        }
+    }
+
+    &--footer {
+        width: 25%;
+        .paragraph{
+            padding-top:25px;
+        }
+
+        p {
+            margin-left:20px;
+            line-height: 1.5em;
+        }
+    }
+    
+    
+    .paragraph{
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        margin-bottom:0;
+    }
+}

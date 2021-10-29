@@ -120,15 +120,13 @@
 
     <footer class="site-footer">
       {% block footer %}
-        <div class="{{ container }}">
-            <div class="site-footer clearfix">
-              {{ page.footer }}
-            </div>
+          <div class="footer-section clearfix">
+            {{ page.footer }}
+          </div>
 
-            <div class="site-copyright clearfix">
-              {{ page.copyright }}
-            </div>
-        </div>
+          <div class="copyright-section clearfix">
+            {{ page.copyright }}
+          </div>
       {% endblock %}
     </footer>
   </div>

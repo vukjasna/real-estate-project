@@ -1,0 +1,68 @@
+.site-footer{
+    background: url(../../images/bg-2.jpg) no-repeat center;
+    background-size: cover;
+    padding:0;
+    
+    p {
+        color: #ccc;
+    }
+
+    h6 {
+        color:#fefefe;
+        margin-bottom: 30px;
+    }
+
+    .block {
+        margin:0;
+        border:none;
+    }
+
+    .block-views {
+        width:50%;
+        color: #c7c7c7;
+    }
+
+    .content {
+        a {
+            color: #c7c7c7;
+            
+            &:hover {
+                color:$greenHover;
+            }
+        }
+    }
+      
+}
+
+.footer-section {
+    background: transparentize($backgroundOverlay, 0.2);
+    padding:110px 0 80px;
+    p {
+        font-size: 12px;
+        line-height: 1.4em;
+    }
+}
+
+.region-footer {
+    max-width: $maxWidth;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copyright-section {
+    background: transparentize($backgroundOverlay, 0.1);
+    text-align: center;
+    padding:20px 0;
+    border-top: 1px solid #484848;
+    font-size: 13px;
+    p {
+        font-size: 13px;
+    }
+
+    .content {
+        a {
+            color: $greenHover;
+        }
+    }   
+}

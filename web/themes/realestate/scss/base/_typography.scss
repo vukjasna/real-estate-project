@@ -1,14 +1,21 @@
-.page-wrapper {
-    h6 {
-        font-family: $montserrat;
-        font-size: 16px;
-        color: $titleColor;
-    }
+h6 {
+    font-family: $montserrat;
+    font-size: 16px;
+    color: $titleColor;
+}
 
-    li {
-        list-style-type: none;
-    }
-    
+li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 14px;
+    font-family: $montserrat;
+    color: $textColor;
+}
+
+/*change links only on page, not in admin menu*/
+.page-wrapper { 
     a {
         color: $titleColor;
         font-family: $montserrat;
@@ -19,16 +26,5 @@
     a:hover {
         color: $greenHover;
     }
-    
-    p {
-        font-size: 14px;
-        font-family: $montserrat;
-        color: $textColor;
-    }
-
-    header {
-        p {
-            font-size: 12px;
-        }
-    }
 }
+

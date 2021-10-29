@@ -1,11 +1,15 @@
 header {
-    max-width: 1170px;
+    max-width: $maxWidth;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 13px 0;
+
+    p {
+        font-size: 12px;
+    }
 
     #search-block-form {
         flex-flow: row-reverse nowrap;
@@ -22,27 +26,5 @@ header {
         padding: 0 15px;
         height: 30px;
         margin-left: 10px;
-    }
-}
-
-.contact {
-    width: 60%;
-    .field {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        &__info {
-            flex-direction: column;
-            margin-left: 20px;
-        }    
-    }
-    
-    .paragraph{
-        display: flex;
-        align-items: center;
-    }
-
-    img {
-        margin-bottom:0;
     }
 }

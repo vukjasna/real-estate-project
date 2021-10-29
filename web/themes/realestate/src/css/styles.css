@@ -1,17 +1,24 @@
 /*Colors*/
 /*Fonts*/
+/*Width*/
 * {
   margin: 0;
   padding: 0; }
 
-.page-wrapper h6 {
+h6 {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #1f223e; }
 
-.page-wrapper li {
+li {
   list-style-type: none; }
 
+p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #606060; }
+
+/*change links only on page, not in admin menu*/
 .page-wrapper a {
   color: #1f223e;
   font-family: "Montserrat", sans-serif;
@@ -21,13 +28,44 @@
 .page-wrapper a:hover {
   color: #95c41f; }
 
-.page-wrapper p {
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  color: #606060; }
+.contact--header {
+  width: 60%; }
+  .contact--header .field {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .contact--header .field__info {
+      flex-direction: column;
+      margin-left: 20px; }
 
-.page-wrapper header p {
-  font-size: 12px; }
+.contact--footer {
+  width: 25%; }
+  .contact--footer .paragraph {
+    padding-top: 25px; }
+  .contact--footer p {
+    margin-left: 20px;
+    line-height: 1.5em; }
+
+.contact .paragraph {
+  display: flex;
+  align-items: center; }
+
+.contact img {
+  margin-bottom: 0; }
+
+.table {
+  border-collapse: collapse; }
+  .table td, .table tr {
+    border: none;
+    padding-top: 0; }
+  .table tr:not(:first-child) {
+    border-top: 34px solid transparent; }
+  .table a {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block; }
+  .table .views-field-field-image {
+    padding-left: 0; }
 
 header {
   max-width: 1170px;
@@ -37,6 +75,8 @@ header {
   align-items: center;
   flex-wrap: wrap;
   padding: 13px 0; }
+  header p {
+    font-size: 12px; }
   header #search-block-form {
     flex-flow: row-reverse nowrap;
     align-items: center; }
@@ -48,21 +88,6 @@ header {
     padding: 0 15px;
     height: 30px;
     margin-left: 10px; }
-
-.contact {
-  width: 60%; }
-  .contact .field {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; }
-    .contact .field__info {
-      flex-direction: column;
-      margin-left: 20px; }
-  .contact .paragraph {
-    display: flex;
-    align-items: center; }
-  .contact img {
-    margin-bottom: 0; }
 
 .navbar {
   background-color: rgba(31, 34, 62, 0.9); }
@@ -78,3 +103,47 @@ header {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap; }
+
+.site-footer {
+  background: url(../../images/bg-2.jpg) no-repeat center;
+  background-size: cover;
+  padding: 0; }
+  .site-footer p {
+    color: #ccc; }
+  .site-footer h6 {
+    color: #fefefe;
+    margin-bottom: 30px; }
+  .site-footer .block {
+    margin: 0;
+    border: none; }
+  .site-footer .block-views {
+    width: 50%;
+    color: #c7c7c7; }
+  .site-footer .content a {
+    color: #c7c7c7; }
+    .site-footer .content a:hover {
+      color: #95c41f; }
+
+.footer-section {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 110px 0 80px; }
+  .footer-section p {
+    font-size: 12px;
+    line-height: 1.4em; }
+
+.region-footer {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; }
+
+.copyright-section {
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #484848;
+  font-size: 13px; }
+  .copyright-section p {
+    font-size: 13px; }
+  .copyright-section .content a {
+    color: #95c41f; }

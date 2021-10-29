@@ -3,8 +3,12 @@
 $titleColor: #1f223e;
 $textColor: #606060;
 $greenHover: #95c41f;
-
+$backgroundOverlay:rgb(0, 0, 0);
 /*Fonts*/
 
 $montserrat: 'Montserrat', sans-serif;
 $raleway: 'Raleway', sans-serif;
+
+/*Width*/
+
+$maxWidth: 1170px;
