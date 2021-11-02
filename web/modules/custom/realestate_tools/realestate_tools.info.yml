@@ -1,0 +1,9 @@
+name: 'Realestate Tools'
+type: module
+description: 'Tools module'
+core: 8.x
+package: 'Custom'
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - paragraphs:paragraphs
