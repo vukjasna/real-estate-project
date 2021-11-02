@@ -113,7 +113,7 @@ header {
     aspect-ratio: 16/9;
     /* No clicking/hover effects */
     pointer-events: none;
-    transform: translateY(-25%); }
+    transform: translateY(-20%); }
 
 .site-footer {
   background: url(../../images/bg-2.jpg) no-repeat center;
