@@ -44,8 +44,7 @@
 }
 
 .region-footer {
-    max-width: $maxWidth;
-    margin: auto;
+    @include maxWidth;
     display: flex;
     flex-wrap: wrap;
 }

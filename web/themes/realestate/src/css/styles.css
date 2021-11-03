@@ -5,10 +5,15 @@
   margin: 0;
   padding: 0; }
 
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px; }
+
 h6 {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: #1f223e; }
+  color: #1f223e;
+  font-weight: 600; }
 
 li {
   list-style-type: none; }
@@ -53,19 +58,16 @@ p {
 .contact img {
   margin-bottom: 0; }
 
-.table {
-  border-collapse: collapse; }
-  .table td, .table tr {
-    border: none;
-    padding-top: 0; }
-  .table tr:not(:first-child) {
-    border-top: 34px solid transparent; }
-  .table a {
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block; }
-  .table .views-field-field-image {
-    padding-left: 0; }
+.iframe-field {
+  height: 610px;
+  overflow: hidden; }
+  .iframe-field > div {
+    width: 100%;
+    /* Keep it the right aspect-ratio */
+    aspect-ratio: 16/9;
+    /* No clicking/hover effects */
+    pointer-events: none;
+    transform: translateY(-20%); }
 
 header {
   max-width: 1170px;
@@ -103,17 +105,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap; }
-
-.iframe-field {
-  height: 610px;
-  overflow: hidden; }
-  .iframe-field > div {
-    width: 100%;
-    /* Keep it the right aspect-ratio */
-    aspect-ratio: 16/9;
-    /* No clicking/hover effects */
-    pointer-events: none;
-    transform: translateY(-20%); }
 
 .site-footer {
   background: url(../../images/bg-2.jpg) no-repeat center;
@@ -158,3 +149,118 @@ header {
     font-size: 13px; }
   .copyright-section .content a {
     color: #95c41f; }
+
+.table {
+  border-collapse: collapse; }
+  .table td, .table tr {
+    border: none;
+    padding-top: 0; }
+  .table tr:not(:first-child) {
+    border-top: 34px solid transparent; }
+  .table a {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block; }
+  .table .views-field-field-image {
+    padding-left: 0; }
+
+.properties {
+  max-width: 1170px;
+  margin: auto; }
+  .properties .views-field {
+    width: 368px; }
+
+.property {
+  position: relative;
+  transition: all 0.5s ease; }
+  .property .views-field-field-featured-image {
+    height: 235px;
+    overflow: hidden; }
+  .property .views-field-field-category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 15px; }
+    .property .views-field-field-category a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600; }
+  .property .views-field-view-node {
+    position: absolute;
+    top: 28%;
+    left: 28%;
+    padding: 9px 12px 10px;
+    border: 1px solid white;
+    width: 35%;
+    display: none; }
+    .property .views-field-view-node a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600; }
+  .property .views-field-title {
+    font-weight: 600;
+    font-size: 18px;
+    width: 70%;
+    display: inline-block;
+    padding: 10px 0 7px; }
+  .property .views-field-field-price {
+    color: #95c41f;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    top: 2px;
+    padding: 10px 0 7px; }
+  .property .views-field-field-address {
+    padding-bottom: 15px; }
+  .property:hover .views-field-view-node {
+    display: flex;
+    justify-content: center; }
+    .property:hover .views-field-view-node:hover {
+      background: #95c41f;
+      color: white;
+      border-color: #95c41f; }
+  .property:hover .views-field-field-category {
+    display: none; }
+  .property:hover .views-field-field-featured-image {
+    background-color: rgba(0, 0, 0, 0.8); }
+    .property:hover .views-field-field-featured-image img {
+      transform: scale(1.05); }
+
+.short-icons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f223e;
+  padding: 15px 0; }
+  .short-icons .paragraph {
+    display: flex;
+    align-items: center; }
+    .short-icons .paragraph img {
+      margin-right: 10px;
+      margin-bottom: 0px; }
+    .short-icons .paragraph p {
+      color: white;
+      font-weight: 600; }
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  margin: auto;
+  margin: 40px auto; }
+  .pagination li {
+    background: #F5F5F5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; }
+  .pagination .active {
+    background-color: #95c41f;
+    color: white; }

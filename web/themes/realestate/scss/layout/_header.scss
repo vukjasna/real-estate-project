@@ -1,6 +1,5 @@
 header {
-    max-width: $maxWidth;
-    margin: auto;
+    @include maxWidth;
     display: flex;
     justify-content: space-between;
     align-items: center;

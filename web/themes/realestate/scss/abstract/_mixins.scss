@@ -1,0 +1,13 @@
+@mixin maxWidth {
+    max-width: $maxWidth;
+    margin: auto;
+}
+    
+
+@mixin whiteLink {
+    a {
+        color:white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
