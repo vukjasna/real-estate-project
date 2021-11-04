@@ -1,0 +1,16 @@
+.logo-block{
+    @include maxWidth;
+    .field {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 115px;
+        &__item {
+            border: 1px solid $lightGray;
+            padding: 0 30px;
+            img {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -4,8 +4,6 @@
 
 .grid-view {
     @include maxWidth;
-    padding: 55px 0 60px;
-
     .views-field {
         overflow: hidden;
     }

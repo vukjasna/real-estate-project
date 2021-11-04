@@ -1,0 +1,13 @@
+.section-heading {
+    @include maxWidth;
+    text-align: center;
+    padding: 0 171px 55px;
+    line-height: 1.5em;
+    
+    h2 {
+        font-size: 30px;
+        color: $titleColor;
+        margin-bottom: 20px;
+    }
+}
+
