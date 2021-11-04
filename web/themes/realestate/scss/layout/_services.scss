@@ -1,0 +1,35 @@
+.services {
+    .views-field {
+        width: 270px;
+        background: $lightGray;
+        &-field-featured-image {
+            height: 195px;
+            position: relative;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        &-name {
+            @include teaserTitles;
+            padding: 26px 15px 5px;
+        }
+
+        &-field-short-description {
+            padding: 0 15px 25px;
+        }
+
+    }
+}
+
+.service {
+    height: 348px;
+
+    p {
+        line-height: 1.6em;
+    }
+
+}

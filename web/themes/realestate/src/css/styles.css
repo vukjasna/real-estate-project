@@ -223,6 +223,29 @@ header {
     .region-banner .field--type-image img {
       margin-bottom: 0; }
 
+.services .views-field {
+  width: 270px;
+  background: #f5f5f5; }
+  .services .views-field-field-featured-image {
+    height: 195px;
+    position: relative; }
+    .services .views-field-field-featured-image img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .services .views-field-name {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 26px 15px 5px; }
+  .services .views-field-field-short-description {
+    padding: 0 15px 25px; }
+
+.service {
+  height: 348px; }
+  .service p {
+    line-height: 1.6em; }
+
 .properties .views-field {
   width: 368px; }
 
@@ -374,6 +397,8 @@ header {
   padding: 20px 0;
   border-top: 1px solid #484848;
   font-size: 13px; }
+  .copyright-section .block {
+    margin: auto; }
   .copyright-section p {
     font-size: 13px; }
   .copyright-section .content a {
@@ -410,12 +435,13 @@ header {
     overflow: hidden; }
   .grid-item .views-field-title, .grid-item .views-field-name {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 18px; }
+  .grid-item .views-field-title {
     display: inline-block; }
+  .grid-item p {
+    line-height: 1.6em; }
   .grid-item .field--type-image {
     float: left;
     margin: 0 1em 0 0; }
-  .grid-item:hover .views-field-field-featured-image, .grid-item:hover .views-field-field-image {
-    background-color: rgba(0, 0, 0, 0.8); }
-    .grid-item:hover .views-field-field-featured-image img, .grid-item:hover .views-field-field-image img {
-      transform: scale(1.05); }
+  .grid-item:hover .views-field-field-featured-image img, .grid-item:hover .views-field-field-image img {
+    transform: scale(1.05); }

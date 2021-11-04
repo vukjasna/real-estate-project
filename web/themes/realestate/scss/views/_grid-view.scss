@@ -21,10 +21,16 @@
             
     
         &-title, &-name {
-            font-weight: 600;
-            font-size: 18px;
+            @include teaserTitles;
+        }
+
+        &-title {
             display: inline-block;
         }
+    }
+
+    p {
+        line-height: 1.6em;
     }
 
     .field--type-image {
@@ -34,7 +40,6 @@
 
     &:hover {
         .views-field-field-featured-image, .views-field-field-image {
-            background-color:transparentize($backgroundOverlay, 0.2);
             img {
                 transform:scale(1.05);
             }

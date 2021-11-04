@@ -34,3 +34,8 @@
     font-family: $montserrat;
     color: $textColor;
 }
+
+@mixin teaserTitles {
+    font-weight: 600;
+    font-size: 18px;
+}
