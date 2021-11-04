@@ -1,0 +1,61 @@
+.blog-item {
+    font-size: 14px;
+    .views-field {
+        width: 358px;
+        background: $lightGray;
+        padding: 0 15px;
+        &-created, &-body, &-view-node {
+            position: relative;
+            top:-5px;
+        }
+
+        &-field-image {
+            padding: 0;
+        }
+
+        &-title {
+            padding-top: 15px;
+            line-height: 1.5em;
+            a {
+                color: $titleColor;
+            }
+        }
+
+        &-title, &-created {
+            border-left: 4px solid $titleColor;
+        }
+
+        &-created, &-body, &-view-node {
+            padding-bottom: 15px;
+        } 
+
+        &-created {
+            @include paragraphStyle;
+        }
+
+        &-view-node {
+            border-bottom: 4px solid $titleColor;
+        }
+    }
+
+    a {
+        color: #666;
+        font-family: $montserrat;
+        font-weight: 600;
+        &:hover {
+            color: $greenHover;
+        }
+    }
+
+    &:hover {
+        a {
+            color: $greenHover;
+        }
+
+        .views-field {
+            &-title, &-created, &-view-node {
+                border-color: $greenHover;
+            }
+        }
+    }
+}

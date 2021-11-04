@@ -1,12 +1,34 @@
-.iframe-field {
-    height: 610px;
-    overflow: hidden;
-    & > div {
+.region-banner {
+    .iframe-field {
+        height: 610px;
+        overflow: hidden;
+        & > div {
+            @include overlay;
+            width: 100%;
+            /* Keep it the right aspect-ratio */
+            aspect-ratio: 16/9;
+            /* No clicking/hover effects */
+            pointer-events: none;
+            transform:translateY(-20%);
+        }
+    
+        & + .title-block {
+            transform: translate(27%, 45%);
+        }
+    }
+
+    .banner-button {
+        position:absolute;
+        top:60%;
         width: 100%;
-        /* Keep it the right aspect-ratio */
-        aspect-ratio: 16/9;
-        /* No clicking/hover effects */
-        pointer-events: none;
-        transform:translateY(-20%);
+        display: flex;
+        justify-content: center;
+
+        a {
+            @include whiteBtn;
+            &:hover {
+                background: $greenHover;
+            }
+        }
     }
 }

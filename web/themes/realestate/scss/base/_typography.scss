@@ -1,6 +1,14 @@
 h1 {
     font-family: $raleway;
     font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+h2 {
+    font-family: $raleway;
+    font-size: 48px;
+    text-transform: uppercase;
 }
 
 h6 {
@@ -15,9 +23,7 @@ li {
 }
 
 p {
-    font-size: 14px;
-    font-family: $montserrat;
-    color: $textColor;
+    @include paragraphStyle;
 }
 
 /*change links only on page, not in admin menu*/

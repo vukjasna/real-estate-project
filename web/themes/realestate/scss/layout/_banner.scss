@@ -1,0 +1,38 @@
+.region-banner {
+    position: relative;
+    .title-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(18%, 45%);
+        transform-origin: center;
+        color: white;
+    }
+
+    .breadcrumb-block {
+        position: relative;
+        bottom: 30px;
+        left: 18%;
+        a {
+            color: #B3B3B3;
+            text-transform: uppercase;
+            font-family: $montserrat;
+            font-weight: 600;
+        }
+    }
+
+    .field--type-image {
+        @include overlay;
+        height: 433px;
+        overflow: hidden;
+        
+        img {
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+

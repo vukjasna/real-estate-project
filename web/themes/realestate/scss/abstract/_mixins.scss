@@ -5,9 +5,32 @@
     
 
 @mixin whiteLink {
-    a {
-        color:white;
-        text-transform: uppercase;
-        font-weight: 600;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@mixin whiteBtn {
+    @include whiteLink;
+    border:1px solid white;
+    padding: 9px 12px 10px;
+    display: block;
+}
+
+@mixin overlay {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparentize($backgroundOverlay, 0.3);
     }
+}
+
+@mixin paragraphStyle {
+    font-size: 14px;
+    font-family: $montserrat;
+    color: $textColor;
 }

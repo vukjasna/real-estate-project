@@ -3,11 +3,18 @@
 /*Width*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 40px; }
+  font-size: 40px;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase; }
 
 h6 {
   font-family: "Montserrat", sans-serif;
@@ -58,16 +65,62 @@ p {
 .contact img {
   margin-bottom: 0; }
 
-.iframe-field {
+.region-banner .iframe-field {
   height: 610px;
   overflow: hidden; }
-  .iframe-field > div {
+  .region-banner .iframe-field > div {
     width: 100%;
     /* Keep it the right aspect-ratio */
     aspect-ratio: 16/9;
     /* No clicking/hover effects */
     pointer-events: none;
     transform: translateY(-20%); }
+    .region-banner .iframe-field > div::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+  .region-banner .iframe-field + .title-block {
+    transform: translate(27%, 45%); }
+
+.region-banner .banner-button {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .region-banner .banner-button a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid white;
+    padding: 9px 12px 10px;
+    display: block; }
+    .region-banner .banner-button a:hover {
+      background: #95c41f; }
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  margin: auto;
+  margin: 40px auto; }
+  .pagination li {
+    background: #f5f5f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; }
+  .pagination .active {
+    background-color: #95c41f;
+    color: white; }
 
 header {
   max-width: 1170px;
@@ -92,7 +145,9 @@ header {
     margin-left: 10px; }
 
 .navbar {
-  background-color: rgba(31, 34, 62, 0.9); }
+  background-color: rgba(31, 34, 62, 0.9);
+  position: relative;
+  bottom: 5px; }
   .navbar a {
     color: white;
     font-weight: 600;
@@ -105,6 +160,152 @@ header {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap; }
+
+.region-banner {
+  position: relative; }
+  .region-banner .title-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(18%, 45%);
+    transform-origin: center;
+    color: white; }
+  .region-banner .breadcrumb-block {
+    position: relative;
+    bottom: 30px;
+    left: 18%; }
+    .region-banner .breadcrumb-block a {
+      color: #B3B3B3;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600; }
+  .region-banner .field--type-image {
+    height: 433px;
+    overflow: hidden; }
+    .region-banner .field--type-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+    .region-banner .field--type-image img {
+      margin-bottom: 0; }
+
+.properties .views-field {
+  width: 368px; }
+
+.property .views-field-title {
+  width: 70%;
+  text-transform: capitalize;
+  padding: 10px 0 7px; }
+
+.property .views-field-field-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 15px; }
+  .property .views-field-field-category a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600; }
+
+.property .views-field-view-node {
+  position: absolute;
+  top: 28%;
+  left: 28%;
+  display: none; }
+  .property .views-field-view-node a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid white;
+    padding: 9px 12px 10px;
+    display: block; }
+
+.property .views-field-field-price {
+  color: #95c41f;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  width: 25%;
+  display: inline-block;
+  text-align: right;
+  position: relative;
+  top: 2px;
+  padding: 10px 0 7px; }
+
+.property .views-field-field-address {
+  text-transform: capitalize;
+  padding-bottom: 15px;
+  font-weight: 500; }
+
+.property:hover .views-field-view-node {
+  display: flex; }
+  .property:hover .views-field-view-node a:hover {
+    background: #95c41f;
+    color: white;
+    border-color: #95c41f; }
+
+.property:hover .views-field-field-category {
+  display: none; }
+
+.short-icons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f223e;
+  padding: 15px 0; }
+  .short-icons .paragraph {
+    display: flex;
+    align-items: center; }
+    .short-icons .paragraph img {
+      margin-bottom: 0px;
+      position: relative;
+      top: 2px; }
+    .short-icons .paragraph p {
+      color: white;
+      font-weight: 600;
+      text-transform: lowercase; }
+
+.blog-item {
+  font-size: 14px; }
+  .blog-item .views-field {
+    width: 358px;
+    background: #f5f5f5;
+    padding: 0 15px; }
+    .blog-item .views-field-created, .blog-item .views-field-body, .blog-item .views-field-view-node {
+      position: relative;
+      top: -5px; }
+    .blog-item .views-field-field-image {
+      padding: 0; }
+    .blog-item .views-field-title {
+      padding-top: 15px;
+      line-height: 1.5em; }
+      .blog-item .views-field-title a {
+        color: #1f223e; }
+    .blog-item .views-field-title, .blog-item .views-field-created {
+      border-left: 4px solid #1f223e; }
+    .blog-item .views-field-created, .blog-item .views-field-body, .blog-item .views-field-view-node {
+      padding-bottom: 15px; }
+    .blog-item .views-field-created {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #606060; }
+    .blog-item .views-field-view-node {
+      border-bottom: 4px solid #1f223e; }
+  .blog-item a {
+    color: #666;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; }
+    .blog-item a:hover {
+      color: #95c41f; }
+  .blog-item:hover a {
+    color: #95c41f; }
+  .blog-item:hover .views-field-title, .blog-item:hover .views-field-created, .blog-item:hover .views-field-view-node {
+    border-color: #95c41f; }
 
 .site-footer {
   background: url(../../images/bg-2.jpg) no-repeat center;
@@ -164,103 +365,30 @@ header {
   .table .views-field-field-image {
     padding-left: 0; }
 
-.properties {
-  max-width: 1170px;
-  margin: auto; }
-  .properties .views-field {
-    width: 368px; }
+.views-row {
+  margin-bottom: 30px; }
 
-.property {
+.grid-view {
+  max-width: 1170px;
+  margin: auto;
+  padding: 55px 0 60px; }
+  .grid-view .views-field {
+    overflow: hidden; }
+
+.grid-item {
   position: relative;
   transition: all 0.5s ease; }
-  .property .views-field-field-featured-image {
+  .grid-item .views-field-field-featured-image, .grid-item .views-field-field-image {
     height: 235px;
     overflow: hidden; }
-  .property .views-field-field-category {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 6px 15px; }
-    .property .views-field-field-category a {
-      color: white;
-      text-transform: uppercase;
-      font-weight: 600; }
-  .property .views-field-view-node {
-    position: absolute;
-    top: 28%;
-    left: 28%;
-    padding: 9px 12px 10px;
-    border: 1px solid white;
-    width: 35%;
-    display: none; }
-    .property .views-field-view-node a {
-      color: white;
-      text-transform: uppercase;
-      font-weight: 600; }
-  .property .views-field-title {
+  .grid-item .views-field-title, .grid-item .views-field-name {
     font-weight: 600;
     font-size: 18px;
-    width: 70%;
-    display: inline-block;
-    padding: 10px 0 7px; }
-  .property .views-field-field-price {
-    color: #95c41f;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    font-size: 22px;
-    width: 25%;
-    display: inline-block;
-    text-align: right;
-    position: relative;
-    top: 2px;
-    padding: 10px 0 7px; }
-  .property .views-field-field-address {
-    padding-bottom: 15px; }
-  .property:hover .views-field-view-node {
-    display: flex;
-    justify-content: center; }
-    .property:hover .views-field-view-node:hover {
-      background: #95c41f;
-      color: white;
-      border-color: #95c41f; }
-  .property:hover .views-field-field-category {
-    display: none; }
-  .property:hover .views-field-field-featured-image {
+    display: inline-block; }
+  .grid-item .field--type-image {
+    float: left;
+    margin: 0 1em 0 0; }
+  .grid-item:hover .views-field-field-featured-image, .grid-item:hover .views-field-field-image {
     background-color: rgba(0, 0, 0, 0.8); }
-    .property:hover .views-field-field-featured-image img {
+    .grid-item:hover .views-field-field-featured-image img, .grid-item:hover .views-field-field-image img {
       transform: scale(1.05); }
-
-.short-icons {
-  display: flex;
-  justify-content: space-around;
-  background-color: #1f223e;
-  padding: 15px 0; }
-  .short-icons .paragraph {
-    display: flex;
-    align-items: center; }
-    .short-icons .paragraph img {
-      margin-right: 10px;
-      margin-bottom: 0px; }
-    .short-icons .paragraph p {
-      color: white;
-      font-weight: 600; }
-
-.pagination {
-  display: flex;
-  justify-content: space-around;
-  width: 25%;
-  margin: auto;
-  margin: 40px auto; }
-  .pagination li {
-    background: #F5F5F5;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600; }
-  .pagination .active {
-    background-color: #95c41f;
-    color: white; }

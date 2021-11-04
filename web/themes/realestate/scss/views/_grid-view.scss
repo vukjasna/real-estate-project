@@ -1,0 +1,45 @@
+.views-row {
+    margin-bottom: 30px;
+}
+
+.grid-view {
+    @include maxWidth;
+    padding: 55px 0 60px;
+
+    .views-field {
+        overflow: hidden;
+    }
+}
+
+.grid-item {
+    position: relative;
+    transition: all 0.5s ease;
+
+    .views-field{
+        &-field-featured-image, &-field-image {
+            height: 235px;
+            overflow: hidden;
+        }
+            
+    
+        &-title, &-name {
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+        }
+    }
+
+    .field--type-image {
+        float: left;
+        margin: 0 1em 0 0;
+    }
+
+    &:hover {
+        .views-field-field-featured-image, .views-field-field-image {
+            background-color:transparentize($backgroundOverlay, 0.2);
+            img {
+                transform:scale(1.05);
+            }
+        }
+    }
+}
