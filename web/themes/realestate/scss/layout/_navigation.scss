@@ -1,7 +1,10 @@
-.navbar {
-    background-color: transparentize($titleColor, 0.1);
-    position: relative;
-    bottom: 5px;
+.navigation {
+    background-color: transparentize($titleColor, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     a {
         color:white;
         font-weight: 600;

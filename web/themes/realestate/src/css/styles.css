@@ -150,7 +150,7 @@ p {
 .layout {
   padding-bottom: 80px; }
 
-header {
+.header__top {
   max-width: 1170px;
   margin: auto;
   display: flex;
@@ -158,31 +158,41 @@ header {
   align-items: center;
   flex-wrap: wrap;
   padding: 13px 0; }
-  header p {
-    font-size: 12px; }
-  header #search-block-form {
-    flex-flow: row-reverse nowrap;
-    align-items: center; }
-  header fieldset {
-    border-width: 0; }
-  header .form-search {
-    border-color: #1f223e;
-    border-width: 1px;
-    padding: 0 15px;
-    height: 30px;
-    margin-left: 10px; }
 
-.navbar {
-  background-color: rgba(31, 34, 62, 0.9);
-  position: relative;
-  bottom: 5px; }
-  .navbar a {
+.header__bottom {
+  position: relative; }
+
+.header p {
+  font-size: 12px; }
+
+.header #search-block-form {
+  flex-flow: row-reverse nowrap;
+  align-items: center; }
+
+.header fieldset {
+  border-width: 0; }
+
+.header .form-search {
+  border-color: #1f223e;
+  border-width: 1px;
+  padding: 0 15px;
+  height: 30px;
+  margin-left: 10px; }
+
+.navigation {
+  background-color: rgba(31, 34, 62, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; }
+  .navigation a {
     color: white;
     font-weight: 600;
     text-transform: uppercase;
     padding: 19px;
     display: block; }
-  .navbar .nav {
+  .navigation .nav {
     width: 46%;
     margin: auto;
     display: flex;
@@ -201,8 +211,8 @@ header {
     transform-origin: center;
     color: white; }
   .region-banner .breadcrumb-block {
-    position: relative;
-    bottom: 30px;
+    position: absolute;
+    bottom: 10px;
     left: 18%; }
     .region-banner .breadcrumb-block a {
       color: #B3B3B3;
@@ -418,8 +428,11 @@ header {
   .table .views-field-field-image {
     padding-left: 0; }
 
+.layout-main-wrapper {
+  padding-top: 50px; }
+
 .views-row {
-  margin-bottom: 30px; }
+  margin-bottom: 10px; }
 
 .grid-view {
   max-width: 1170px;

@@ -1,11 +1,17 @@
-header {
-    @include maxWidth;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 13px 0;
+.header {
+    &__top {
+        @include maxWidth;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 13px 0;
+    }
 
+    &__bottom {
+       position: relative;
+    }
+    
     p {
         font-size: 12px;
     }
@@ -25,5 +31,5 @@ header {
         padding: 0 15px;
         height: 30px;
         margin-left: 10px;
-    }
+    }  
 }
