@@ -4,6 +4,9 @@
         overflow: hidden;
         & > div {
             @include overlay;
+            &::before {
+                background: transparentize($backgroundOverlay, 0.9);
+            }
             width: 100%;
             /* Keep it the right aspect-ratio */
             aspect-ratio: 16/9;
@@ -11,10 +14,7 @@
             pointer-events: none;
             transform:translateY(-20%);
         }
-    
-        & + .title-block {
-            transform: translate(27%, 45%);
-        }
+
     }
 
     .banner-button {

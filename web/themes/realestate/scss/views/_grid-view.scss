@@ -4,6 +4,9 @@
 
 .views-row {
     margin-bottom: 10px;
+    &:last-child {
+        padding-bottom:80px;
+    }
 }
 
 .grid-view {
