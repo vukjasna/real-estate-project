@@ -3,10 +3,11 @@
 
     .layout {
         align-items: center;
+    }
 
-        &__region {
-            padding: 0 15px;
-        }
+    &__content {
+       width: 90%;
+       margin: auto;
     }
 
     h3 {

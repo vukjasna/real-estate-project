@@ -35,7 +35,7 @@
 }
 
 .footer-section {
-    background: transparentize($backgroundOverlay, 0.2);
+    background: $backgroundOverlay;    
     padding:110px 0 80px;
     p {
         font-size: 12px;
@@ -50,7 +50,7 @@
 }
 
 .copyright-section {
-    background: transparentize($backgroundOverlay, 0.1);
+    background: $backgroundOverlay;
     text-align: center;
     padding:20px 0;
     border-top: 1px solid #484848;

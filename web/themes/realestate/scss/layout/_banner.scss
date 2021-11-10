@@ -27,7 +27,7 @@
     }
 
     .field--type-image {
-        @include overlay;
+        @include overlay($backgroundOverlay);
         height: 433px;
         overflow: hidden;
         

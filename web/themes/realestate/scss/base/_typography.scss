@@ -1,21 +1,26 @@
-h1 {
+h1, h2, h3, h4 {
     font-family: $raleway;
-    font-size: 40px;
     text-transform: uppercase;
+    color: $titleColor;
+}
+
+h1 {
+    font-size: 40px;
+    color:white;
 }
 
 
 h2 {
-    font-family: $raleway;
     font-size: 48px;
-    text-transform: uppercase;
-    color: $titleColor;
+   
 }
 
 h3 {
-    font-family: $raleway;
     font-size: 30px;
-    color: $titleColor;
+}
+
+h4 {
+    font-size: 26px;
 }
 
 h6 {

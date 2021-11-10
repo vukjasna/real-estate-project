@@ -35,12 +35,14 @@
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
+        padding-right: 10px;
 
         h6 {
             margin-bottom: 10px;
         }
 
         .field--type-image {
+            margin-right: 10px;
             float: left;
         }
     }

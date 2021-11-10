@@ -53,12 +53,18 @@
             padding-bottom: 15px;
             font-weight: 400;
         }
+        &-field-featured-image {
+            @include overlay(transparent);
+            position: relative;
+        }
+       
     }
 
 
     &:hover {
         .views-field-view-node {
             display: flex;
+            z-index: 10;
 
             a {
                 &:hover {
@@ -71,6 +77,17 @@
 
         .views-field-field-category {
             display: none;
+        }
+
+        .views-field-field-featured-image {
+            &:before {
+                background:$backgroundOverlay;
+                z-index: 1;
+            }
+            
+            img {
+                transform:scale(1.05);
+            }
         }
 
     }
