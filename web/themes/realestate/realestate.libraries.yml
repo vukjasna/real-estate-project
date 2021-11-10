@@ -2,3 +2,5 @@ realestate-css:
   css:
     theme:
       src/css/styles.css: {}
+      https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap: { type: external }
+      https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap: { type: external }

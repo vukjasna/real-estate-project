@@ -1,0 +1,22 @@
+.about {
+    @include maxWidth;
+
+    .layout {
+        align-items: center;
+
+        &__region {
+            padding: 0 15px;
+        }
+    }
+
+    h3 {
+        &:last-of-type {
+            margin-bottom:30px;
+        }
+    }
+
+    p {
+       margin-bottom: 15px;
+       line-height: 1.6em;
+    }
+}

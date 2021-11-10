@@ -1,0 +1,47 @@
+.features-block {
+    background: linear-gradient(110deg, transparent 38%, $lightGray 38%), url(../../images/features.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    .layout--twocol-section.layout--twocol-section--33-67 {
+        padding: 0;
+        & > .layout__region {
+            position: relative;
+
+            &--second {
+                padding: 60px 130px 45px 220px;
+            }
+        }    
+    }
+
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    p {
+        line-height: 1.8em;
+        margin-bottom: 40px;
+    }
+}
+    
+.awesome-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .field__item {
+        flex: 1 1 30%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        h6 {
+            margin-bottom: 10px;
+        }
+
+        .field--type-image {
+            float: left;
+        }
+    }
+}

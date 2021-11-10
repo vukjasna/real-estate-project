@@ -8,16 +8,17 @@
 @import "blocks/iframe";
 @import "blocks/pagination";
 @import "blocks/section-heading";
-@import "blocks/awesome-features";
-@import "blocks/block-cta";
-@import "blocks/logo-block";
 
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/banner";
+@import "layout/about";
 @import "layout/services";
+@import "layout/awesome-features";
+@import "layout/block-cta";
 @import "layout/properties";
 @import "layout/blog";
+@import "layout/logo-block";
 @import "layout/footer";
 
 @import "views/table-footer";

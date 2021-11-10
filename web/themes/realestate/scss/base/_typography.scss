@@ -33,6 +33,12 @@ p {
     @include paragraphStyle;
 }
 
+strong {
+    font-size: 18px;
+    color: $titleColor;
+    font-weight: 600;
+}
+
 /*change links only on page, not in admin menu*/
 .page-wrapper { 
     a {
