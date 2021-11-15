@@ -12,3 +12,16 @@
 .field--type-image img, .field--name-field-user-picture img {
     margin: 0;
 }
+
+.layout--twocol-section.layout--twocol-section--67-33 {
+    & > .layout__region {
+        &--first {
+            max-width: 67%;
+        }
+
+        &--second {
+            max-width: 33%;
+        }
+    }
+}
+

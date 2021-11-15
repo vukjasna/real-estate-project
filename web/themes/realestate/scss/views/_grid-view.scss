@@ -3,9 +3,9 @@
 }
 
 .views-row {
-    margin-bottom: 10px;
-    &:last-child {
-        padding-bottom:80px;
+    margin-bottom: 20px;
+    .views-col {  
+        margin: 0 15px;
     }
 }
 
@@ -20,7 +20,7 @@
     position: relative;
     transition: all 0.5s ease;
 
-    .views-field{
+    .views-field {
         &-field-featured-image, &-field-image {
             height: 235px;
             overflow: hidden;

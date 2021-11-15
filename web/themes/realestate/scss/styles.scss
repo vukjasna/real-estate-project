@@ -8,6 +8,8 @@
 @import "blocks/iframe";
 @import "blocks/pagination";
 @import "blocks/section-heading";
+@import "blocks/search";
+@import "blocks/property-gallery";
 
 @import "layout/header";
 @import "layout/navigation";
@@ -20,6 +22,7 @@
 @import "layout/taxonomy-term";
 @import "layout/blog";
 @import "layout/logo-block";
+@import "layout/single-post";
 @import "layout/footer";
 
 @import "views/table-footer";

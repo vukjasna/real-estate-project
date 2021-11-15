@@ -15,21 +15,4 @@
     p {
         font-size: 12px;
     }
-
-    #search-block-form {
-        flex-flow: row-reverse nowrap;
-        align-items: center;
-    }
-
-    fieldset {
-        border-width: 0;
-    }
-
-    .form-search {
-        border-color: $titleColor;
-        border-width: 1px;
-        padding: 0 15px;
-        height: 30px;
-        margin-left: 10px;
-    }  
 }

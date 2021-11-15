@@ -4,11 +4,15 @@
     td, tr {
         border: none;
         padding-top: 0;
+        padding-bottom: 0;
     }
 
-    tr:not(:first-child) {
-        border-top: 34px solid transparent;
+    tr {
+        background-color: transparent;
+        padding-top: 34px;
+        display: block;
     }
+
 
     a {
         font-weight: 600;
@@ -18,5 +22,8 @@
 
     .views-field-field-image {
         padding-left: 0;
+        a {
+            margin-bottom:0;
+        }
     }
 }

@@ -3,6 +3,7 @@
 /vendor/
 /web/core/
 /web/modules/contrib/
+/web/modules/fontyourface/
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
@@ -23,3 +24,6 @@ composer.lock
 node_modules/
 
 src
+
+#databases
+db

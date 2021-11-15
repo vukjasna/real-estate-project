@@ -22,7 +22,7 @@
         }
 
         &-title, &-created {
-            border-left: 4px solid $titleColor;
+            @include borderCard(left, $titleColor);
         }
 
         &-created, &-body, &-view-node {
@@ -34,7 +34,7 @@
         }
 
         &-view-node {
-            border-bottom: 4px solid $titleColor;
+            @include borderCard(bottom, $titleColor);
         }
     }
 

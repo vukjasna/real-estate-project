@@ -41,15 +41,7 @@
 }
 
 
-@mixin triangle($borderBottom, $borderLeft, $borderBottomColor) {
-    content: "";
-    display: block;
-    position:absolute;
-    bottom:0;
-    right:0;
-    width: 0;
-    height: 0;
-    border-bottom: $borderBottom solid $borderBottomColor;
-    border-left: $borderLeft solid transparent;
-    z-index: 1;
+
+@mixin borderCard($direction, $color) {
+    border-#{$direction}: 4px solid $color;
 }
