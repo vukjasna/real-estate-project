@@ -1,6 +1,8 @@
 .node {
     &--article {
-        @include maxWidth;
+        &-article, &-property {
+            @include maxWidth;
+        }
 
         p {
             margin-bottom: 15px;
@@ -28,11 +30,6 @@
 
                 &-body {
                     margin: 30px 0 60px;
-                }
-
-                &-title, &-created {
-                    @include borderCard(left, $greenHover);
-                    padding-left: 15px;
                 }
 
                 &-created {
@@ -82,93 +79,22 @@
                 padding: 20px 0 15px;
             }
         }
+
+        &-article {
+            .article-title, .article-created {
+                @include borderCard(left, $greenHover);
+                padding-left: 15px;
+            }
+        }
     }
 
     .layout {
-        &__region {
-            &--second {
-                @include sidebar;
+        &--twocol-section--67-33 {
+            .layout__region {
+                &--second {
+                    @include sidebar;
+                }
             }
         }
-    } 
-}
-
-.categories {
-    a {
-        padding: 12px 0;
-        display: block;
-        font-size: 14px;
-        border-bottom: 1px solid $lightGray;
-    }
-}
-
-.archive {
-    .views-summary {
-        padding-top: 10px;
-        li {
-            @include paragraphStyle;
-            padding:10px 0;
-            border-bottom: 1px solid $lightGray;
-        }
-    }
-}
-
-
-.tags, .block-addtoany {
-    display: inline-flex;
-    margin-bottom: 60px;
-}
-
-.tags {
-    width: 70%;
-   
-    a {
-        font-size: 14px;
-        font-size: $montserrat;
-    }
-
-    .field {
-        display: flex;
-        &__label {
-            font-size: 14px;
-            &:after {
-                content: ":";
-            }
-        }
-    }
-}
-
-.block-addtoany {
-    align-items: center;
-    h2 {
-        font-size: 14px;
-        padding-right: 5px;
-    }
-}
-
-.discount-block {
-    @include overlay(transparentize($backgroundOverlay, 0.4));
-    height: 235px;
-    position:relative;
-    h2 {
-        position:absolute;
-        bottom:10px;
-        left:10px;
-        width:40%;
-        font-size: 18px;
-        line-height: 1.4em;
-        text-transform: capitalize;
-        a {
-            color:white;
-            font-family: $montserrat;
-        }
-    }
-
-    .field--type-image {
-        margin: 0;
-    }
-
-    img {
-        max-width: 100%;
-    }
+    }     
 }

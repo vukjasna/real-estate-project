@@ -13,7 +13,7 @@
     margin: 0;
 }
 
-.layout--twocol-section.layout--twocol-section--67-33 {
+.layout--twocol-section--67-33 {
     & > .layout__region {
         &--first {
             max-width: 67%;
@@ -25,3 +25,14 @@
     }
 }
 
+.layout--threecol-section--50-25-25 {
+    & > .layout__region {
+        &--first {
+            max-width: 50%;
+        }
+
+        &--second, &--third {
+            max-width: 25%;
+        }
+    }
+}
