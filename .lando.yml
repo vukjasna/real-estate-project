@@ -14,47 +14,12 @@ proxy:
     - pma.website-abcd.lndo.site
 
 services:
-  appserver:
-    run:
-#      - "cd $LANDO_MOUNT/web/sites/default && if [ ! -f settings.local.php ]; then cp ../settings.lando.php settings.php; fi"
-      - "cd $LANDO_MOUNT && composer install --prefer-dist"
-  node:
-    type: node
-    run:
-      - "cd $LANDO_MOUNT/web/themes/realestate && npm install"
-      - "cd $LANDO_MOUNT/web/themes/realestate && npm install natives"
-      - "cd $LANDO_MOUNT/web/themes/realestate && gulp build"
-    globals:
-      gulp-cli: "latest"
-
-#  solr:
-#    type: solr:8
-#    core: drupal8
-#    portforward: true
-#    config:
-#      dir: solr-config/8.x
   pma:
     type: phpmyadmin
     hosts:
       - database
-tooling:
-  npm:
-    service: node
-  node:
-    service: node
-  gulp:
-    service: node-cli
-  theme-watch:
-    service: node
-    cmd: cd $LANDO_MOUNT/web/themes/realestate && gulp
-  theme-compile:
-    service: node
-    cmd: cd $LANDO_MOUNT/web/themes/realestate && gulp sass:dev
 
-events:
-  post-db-refresh:
-    - appserver: "cd $LANDO_MOUNT/web && drush cr"
-    - appserver: "cd $LANDO_MOUNT/web && drush uli"
-  post-db-import:
-    - appserver: "cd $LANDO_MOUNT/web && drush cr"
-    - appserver: "cd $LANDO_MOUNT/web && drush uli"
+tooling:
+  domain-config:
+    service: appserver
+    cmd: cd $LANDO_MOUNT && drush cim --partial --source=$LANDO_MOUNT/config/lando -y

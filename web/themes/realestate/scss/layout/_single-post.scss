@@ -42,12 +42,6 @@
             }
         }
 
-
-        h6 {
-            padding-bottom: 15px;
-            border-bottom: 1px solid #CCC;
-        }
-
         .views-row {
             margin-bottom: 0;
         }
@@ -93,9 +87,7 @@
     .layout {
         &__region {
             &--second {
-                .block {
-                    margin-bottom: 30px;
-                }
+                @include sidebar;
             }
         }
     } 
@@ -171,6 +163,11 @@
             font-family: $montserrat;
         }
     }
+
+    .field--type-image {
+        margin: 0;
+    }
+
     img {
         max-width: 100%;
     }

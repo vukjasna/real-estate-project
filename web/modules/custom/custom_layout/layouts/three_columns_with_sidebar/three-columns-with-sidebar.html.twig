@@ -1,0 +1,58 @@
+{% set classes = [
+    'layout',
+    'layout--three-columns-with-sidebar',
+] %}
+
+{% if content %}
+  <div {{ attributes.addClass(classes) }}>
+    <div class="column-one">
+      {% if content.content_top %}
+        <div {{ region_attributes.content_top.addClass('layout__region', 'layout__region--content_top') }}>
+          {{ content.content_top }}
+        </div>
+      {% endif %}
+    
+      <div class="layout__region--top">
+        {% if content.top_left %}
+            <div {{ region_attributes.top_left.addClass('layout__region', 'layout__region--top_left') }}>
+              {{ content.top_left }}
+            </div>
+        {% endif %}
+
+        {% if content.top_right %}
+          <div {{ region_attributes.top_right.addClass('layout__region', 'layout__region--top_right') }}>
+            {{ content.top_right }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if content.content_bottom %}
+        <div {{ region_attributes.content_bottom.addClass('layout__region', 'layout__region--content_bottom') }}>
+          {{ content.content_bottom }}
+        </div>
+      {% endif %}
+      
+      <div class="layout__region--bottom">
+        {% if content.bottom_left %}
+          <div {{ region_attributes.bottom_left.addClass('layout__region', 'layout__region--bottom_left') }}>
+            {{ content.bottom_left }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if content.bottom_right %}
+        <div {{ region_attributes.bottom_right.addClass('layout__region', 'layout__region--bottom_right') }}>
+          {{ content.bottom_right }}
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="column-two">
+      {% if content.sidebar %}
+        <div {{ region_attributes.sidebar.addClass('layout__region', 'layout__region--sidebar') }}>
+          {{ content.sidebar }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

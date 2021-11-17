@@ -1,0 +1,27 @@
+three_columns_with_sidebar:
+  label: 'Three columns with sidebar'
+  path: layouts/three_columns_with_sidebar
+  category: 'Custom layouts'
+  template: three-columns-with-sidebar
+  library: custom_layout/custom_layout
+  icon_map:
+    - [content_top, content_top, sidebar]
+    - [top_left, top_right, sidebar]
+    - [content_bottom, content_bottom, sidebar]
+    - [bottom_left, bottom_right, sidebar]
+
+  regions:
+    content_top:
+      label: Content Top
+    top_left:
+      label: Top Left
+    top_right:
+      label: Top Right
+    content_bottom:
+      label: Content Bottom
+    bottom_left:
+      label: Bottom Left
+    bottom_right:
+      label: Bottom Right
+    sidebar:
+      label: Sidebar

@@ -43,5 +43,9 @@
 .image-cta {
     display: flex;
     justify-content: center;
+    .field--type-image {
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
