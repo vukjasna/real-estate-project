@@ -4,9 +4,56 @@
             @include maxWidth;
         }
 
-        p {
-            margin-bottom: 15px;
+        &-article {
+            .field--name-title, .article-created {
+                @include borderCard(left, $greenHover);
+                padding-left: 15px;
+            }
+
+            .layout {
+                &__region {
+                    padding:0 15px;
+                }
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            .field {
+                &__label {
+                text-transform: capitalize;
+                }
+    
+                &--name {
+                    &-title {
+                        display: block;
+                        margin-top: 25px;
+                        padding-bottom: 5px;
+                    }
+    
+                    &-body {
+                        margin: 30px 0 60px;
+                    }
+    
+                    &-created {
+                        position:relative;
+                        top:-2px;
+                    }
+                }
+    
+                &--type-image  {
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+    
+    
         }
+
+       
 
         .block-search {
             h2 {
@@ -16,44 +63,9 @@
             }
         }
 
-        .field {
-            &__label {
-            text-transform: capitalize;
-            }
-
-            &--name {
-                &-title {
-                    display: block;
-                    margin-top: 25px;
-                    padding-bottom: 5px;
-                }
-
-                &-body {
-                    margin: 30px 0 60px;
-                }
-
-                &-created {
-                    position:relative;
-                    top:-2px;
-                }
-            }
-        }
-
+       
         .views-row {
             margin-bottom: 0;
-        }
-
-        .layout {
-            &__region {
-                padding:0 15px;
-            }
-        }
-
-        .image {
-            img {
-                max-width: 100%;
-                height: auto;
-            }
         }
 
         blockquote {
@@ -79,22 +91,5 @@
                 padding: 20px 0 15px;
             }
         }
-
-        &-article {
-            .article-title, .article-created {
-                @include borderCard(left, $greenHover);
-                padding-left: 15px;
-            }
-        }
     }
-
-    .layout {
-        &--twocol-section--67-33 {
-            .layout__region {
-                &--second {
-                    @include sidebar;
-                }
-            }
-        }
-    }     
 }

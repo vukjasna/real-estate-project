@@ -1,5 +1,5 @@
 .block-cta {
-    @include overlay(linear-gradient(120deg, $greenHover 27%, transparentize($titleColor, 0.2) 27%));
+    @include overlay(linear-gradient(120deg, $greenHover 485px, transparentize($titleColor, 0.2) 486px));
     height: 250px;
     position: relative;
     background: url('../../images/bg-1.jpg') no-repeat;

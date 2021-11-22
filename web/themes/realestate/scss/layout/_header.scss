@@ -6,6 +6,11 @@
         align-items: center;
         flex-wrap: wrap;
         padding: 13px 0;
+
+        h6 {
+            font-size: 16px;
+            text-align: left;
+        }
     }
 
     &__bottom {
@@ -14,5 +19,6 @@
     
     p {
         font-size: 12px;
+        text-align: left;
     }
 }

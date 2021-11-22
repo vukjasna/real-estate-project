@@ -47,8 +47,9 @@ p, blockquote, .field--name-created {
 }
 
 strong {
-    color: $greenHover;
+    color: $titleColor;
     font-weight: 600;
+    font-size: 17px;
 }
 
 /*change links only on page, not in admin menu*/

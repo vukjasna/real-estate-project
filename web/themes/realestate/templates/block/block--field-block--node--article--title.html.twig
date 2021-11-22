@@ -32,7 +32,6 @@
 {%
   set classes = [
     'block',
-    'article-title',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
   ]
@@ -45,7 +44,7 @@
   {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
-      {{ content }}
+      <h6>{{ content }}</h6>
     </div>
   {% endblock %}
 </div>

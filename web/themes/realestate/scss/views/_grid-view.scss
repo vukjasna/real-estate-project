@@ -1,16 +1,17 @@
+.properties, .blog {
+    @include maxWidth;
+    padding-bottom: 80px;
+}
+
 .layout-main-wrapper {
     padding-top: 50px;
 }
 
 .views-row {
     margin-bottom: 20px;
-    .views-col {  
-        margin: 0 15px;
-    }
 }
 
 .grid-view {
-    @include maxWidth;
     .views-field {
         overflow: hidden;
     }
@@ -39,10 +40,11 @@
     p {
         line-height: 1.6em;
     }
-
-    .field--type-image {
-        float: left;
-        margin: 0 1em 0 0;
+    .paragraph {
+        .field--type-image {
+            float: left;
+            margin: 0 1em 0 0;
+        }
     }
 
     &:hover {

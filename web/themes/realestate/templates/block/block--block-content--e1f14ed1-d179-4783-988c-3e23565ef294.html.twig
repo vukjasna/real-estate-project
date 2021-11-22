@@ -33,10 +33,10 @@
   set classes = [
     'block',
     'block-cta',
-    'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}

@@ -1,13 +1,19 @@
-.section-heading {
-    @include maxWidth;
-    text-align: center;
-    padding: 100px 171px 55px;
-    line-height: 1.5em;
-    
-    h2 {
-        font-size: 30px;
-        color: $titleColor;
-        margin-bottom: 20px;
+.block {
+    &-block-content {
+        @include maxWidth;
+        text-align: center;
+        line-height: 1.5em;
+        
+        h2 {
+            font-size: 30px;
+            padding: 100px 171px 20px;
+            color: $titleColor;
+        }
+    }
+
+    &-field-blockblock-contentbasicbody {
+        width: 60%;
+        margin: 0 auto 55px;
     }
 }
 

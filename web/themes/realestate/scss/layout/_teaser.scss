@@ -1,0 +1,159 @@
+
+.grid-item {
+    .teaser {
+        border: none;
+        text-align: left;
+        margin: 0 10px;
+        padding: 0;
+        &--article, &--agent {
+            .node__content {
+                @include borderCard(bottom, $titleColor);
+    
+                &:hover {
+                    @include borderCard(bottom, $greenHover);                  
+                }
+    
+            }
+        }
+
+        &--property {
+            .layout__region {
+                padding:0;
+                h6 {
+                    margin: 0;
+                    padding:0;
+                    border: none;
+                }
+            }
+        }
+
+    
+        &--agent {
+            .teaser {
+                max-height: 373px;
+            }
+
+            .node__content {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(10deg, $lightGray 110px, transparent 112px);
+                    z-index: -1;
+                }
+            }
+            
+            .block {
+                &-field {
+                    &-blocknodeagenttitle, &-blocknodeagentfield-subtitle-list {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .field {
+                &--type-image {
+                    p {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    img {
+                        z-index: -1;
+                    }
+                }
+            }
+        
+            .paragraph {
+                p {
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+        
+                .field--type-image {
+                    width: 15px;
+                    margin: 0 10px 0 0;
+        
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .block-extra-field-blocknodeagentaddtoany, .paragraph {
+                height: 0;
+                overflow: hidden;
+            }
+
+            .layout {
+                &:last-child {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding-bottom: 15px;
+                }
+            }
+
+            &:hover {
+                .block-extra-field-blocknodeagentaddtoany, .paragraph {
+                    height: 100%;
+                }
+
+                .node__content {
+                    &::after {
+                        background: linear-gradient(10deg, $lightGray 190px, transparent 192px);
+                    }
+                }
+
+                .block {
+                    &-field {
+                        &-blocknodeagenttitle, &-blocknodeagentfield-subtitle-list {
+                            text-align: left;
+                            position: absolute;
+                            bottom:0;
+                            transform:rotate(-90deg);
+                            transform-origin: left;
+                        }
+
+                        &-blocknodeagentfield-subtitle-list {
+                            bottom: 5px;
+                        }
+
+                        &-blocknodeagentfield {
+                            &-email, &-phone {
+                                padding-left: 70px;
+                                text-align: left;
+                            }
+                        }
+
+                        &-blocknodeagenttitle {
+                            left: 20px;
+
+                            a {
+                                font-size: 15px;
+                            }
+                            
+                        }
+
+                        &-blocknodeagentfield-subtitle-list {
+                            left: 40px;
+
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    &-extra-field-blocknodeagentaddtoany {
+                        padding-left: 70px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,35 +1,40 @@
-.services {
-    .views-field {
-        width: 270px;
+.service {
+    padding: 0 15px;
+    .content {
         background: $lightGray;
-        &-field-featured-image {
-            height: 195px;
-            position: relative;
-            img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+        text-align: left;
+    }
+
+    .layout {
+        &:last-child {
+            padding: 20px 15px 25px;
+        }
+    }
+    
+    .block-field-blocktaxonomy {
+        &-termpropertyname {
+            @include teaserTitles;
+            margin-bottom: 5px;
+        }
+
+        &-termpropertyfield {
+            &-short-description {
+            @include paragraphStyle;
+            }
+
+            &-featured-image {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
         }
-
-        &-name {
-            @include teaserTitles;
-            padding: 26px 15px 8px;
+    }
+    
+    &:hover {
+        .vocabulary-property {
+            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
         }
-
-        &-field-short-description {
-            padding: 0 15px 25px;
-        }
-
     }
 }
 
-.service {
-    height: 348px;
-
-    p {
-        line-height: 1.6em;
-    }
-
-}

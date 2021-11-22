@@ -1,61 +1,106 @@
 .property {
-    .views-field {
-        &-title {
+    position: relative;
+
+    .layout {
+        &:nth-child(2) {
+            padding: 5px 0;
+            .layout__region {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .block-field {
+        &-blocknodepropertytitle {
             width: 75%;
             text-transform: capitalize;
-            padding: 10px 0 7px;
         }
 
-        &-field-category {
-            position: absolute;
-            top:0;
-            left:0;
-            padding: 6px 15px;
+        &-blocknodepropertyfield {
+            &-category {
+                position: absolute;
+                top:0;
+                left:0;
+                padding: 6px 15px;
+                
+                a {
+                    @include whiteLink;
+                }
+            }
+
+            &-short-icons {
+                background-color: $titleColor;
+                padding:15px 0;
+
+                .field__items {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                }
+
+                .paragraph {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        margin-bottom: 0px;
+                        position: relative;
+                        top: 2px;
+                    }
+                    p {
+                        color: white;
+                        font-weight: 600;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+
+            &-price {
+                color: $greenHover;
+                font-weight: 600;
+                font-family: $montserrat;
+                font-size: 22px;
+                width: 25%;
+                display: inline-block;
+                text-align: right;
+                position: relative;
+                top: 2px;
+            }
+
+            &-address {
+                text-transform: capitalize;
+                padding-bottom: 15px;
+                font-weight: 400;
+            }
+
+            &-featured-image {
+                @include overlay(transparent);
+                height: 235px;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
             
-            a {
-                @include whiteLink;
-            }
-        }
+    }
 
-        &-view-node {
-            position: absolute;
-            top: 28%;
-            left: 28%;
-            display: none;
+    .block-extra-field-blocknodepropertylinks {
+        position: absolute;
+        top: 28%;
+        left: 30%;
+        display: none;
 
-            a {
-                @include whiteBtn;
-            }
+        a {
+            @include whiteBtn;
         }
-
-        &-field-price {
-            color: $greenHover;
-            font-weight: 600;
-            font-family: $montserrat;
-            font-size: 22px;
-            width: 25%;
-            display: inline-block;
-            text-align: right;
-            position: relative;
-            top: 2px;
-            padding: 10px 0 7px;
-        }
-
-        &-field-address {
-            text-transform: capitalize;
-            padding-bottom: 15px;
-            font-weight: 400;
-        }
-        &-field-featured-image {
-            @include overlay(transparent);
-            position: relative;
-        }
-       
     }
 
 
     &:hover {
-        .views-field-view-node {
+        .block-extra-field-blocknodepropertylinks {
             display: flex;
             z-index: 10;
 
@@ -68,42 +113,22 @@
             }            
         }
 
-        .views-field-field-category {
-            display: none;
-        }
-
-        .views-field-field-featured-image {
-            &:before {
-                background:$backgroundOverlay;
-                z-index: 1;
+        .block-field-blocknodepropertyfield {
+            &-category {
+                display: none;
             }
-            
-            img {
-                transform:scale(1.05);
+
+            &-featured-image {
+                &:before {
+                    background:$backgroundOverlay;
+                    z-index: 1;
+                }
+                
+                img {
+                    transform:scale(1.05);
+                }
             }
         }
-
     }
     
-}
-
-.short-icons {
-    display: flex;
-    justify-content: space-around;
-    background-color: $titleColor;
-    padding:15px 0;
-    .paragraph {
-        display: flex;
-        align-items: center;
-        img {
-            margin-bottom: 0px;
-            position: relative;
-            top: 2px;
-        }
-        p {
-            color: white;
-            font-weight: 600;
-            text-transform: lowercase;
-        }
-    }
 }
