@@ -1,0 +1,39 @@
+.contact {
+    .node__content {
+        @include maxWidth;
+    
+        h5 {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $textColor;
+        }
+    
+        .field--name-body {
+            margin-bottom: 30px;
+        }
+    
+        .field__items {
+            > .field__item:not(:last-child) {
+                &::after {
+                    content: "";
+                    width: 120px;
+                    height: 1px;
+                    display: block;
+                    background: #c2c2c2;
+                }
+            }
+        }
+        
+    
+        .paragraph {
+            padding: 20px 0;
+    
+            p {
+                font-size: 12px;
+                padding-left: 20px;
+            }
+        }
+    }
+}

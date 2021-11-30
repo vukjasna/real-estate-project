@@ -23,7 +23,7 @@
 
     .block-field {
         &-blocknodearticlefield-image {
-            height: 240px;
+            max-height: 240px;
             overflow: hidden;
             a {
                 display: block;
@@ -54,6 +54,10 @@
         &:hover {
             color: $greenHover;
         }
+    }
+
+    .comment-forbidden {
+        display: none;
     }
 
     &:hover {

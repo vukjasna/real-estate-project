@@ -5,6 +5,7 @@
         }
 
         &-article {
+            padding-bottom: 80px;
             .field--name-title, .article-created {
                 @include borderCard(left, $greenHover);
                 padding-left: 15px;

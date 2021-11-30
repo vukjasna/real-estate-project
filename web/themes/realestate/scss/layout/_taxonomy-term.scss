@@ -1,4 +1,8 @@
 .taxonomy-term {
+    &.vocabulary-property {
+        margin-bottom: 10px;
+    }
+
     .layout {
         align-items: center;
     }

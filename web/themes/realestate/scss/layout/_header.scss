@@ -2,14 +2,36 @@
     &__top {
         @include maxWidth;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 13px 0;
+        padding: 30px 0;
+
+        @include breakpoint(tablet){
+            padding: 13px 0;
+            justify-content: space-between;
+        }
 
         h6 {
             font-size: 16px;
             text-align: left;
+        }
+
+        .navbar-brand {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+
+            @include breakpoint(tablet){
+                width: 50%;
+                justify-content: flex-start;
+                padding-bottom: 0;
+            }
+
+            @include breakpoint(laptop){
+                width: 15%;
+            }
         }
     }
 

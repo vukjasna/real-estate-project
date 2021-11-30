@@ -19,10 +19,8 @@
         &-blocknodepropertyfield {
             &-category {
                 position: absolute;
-                top:0;
-                left:0;
-                padding: 6px 15px;
-                
+                top:10px;
+                left:15px;
                 a {
                     @include whiteLink;
                 }
@@ -74,13 +72,17 @@
 
             &-featured-image {
                 @include overlay(transparent);
-                height: 235px;
+                max-height: 200px;
                 position: relative;
                 overflow: hidden;
 
                 img {
                     width: 100%;
                     height: auto;
+                }
+                
+                @include breakpoint(tablet){
+                    max-height: 235px;
                 }
             }
         }
@@ -97,6 +99,7 @@
             @include whiteBtn;
         }
     }
+
 
 
     &:hover {

@@ -1,15 +1,22 @@
 .features-block {
-    background: linear-gradient(110deg, transparent 750px, $lightGray 751px), url(../../images/features.png);
+    background: url(../../images/features.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     margin-top: 60px;
+
+    @include breakpoint(laptop) {
+        background: linear-gradient(110deg, transparent 750px, $lightGray 751px), url(../../images/features.png);
+        background-size: contain;
+    }
+
     .layout--twocol-section.layout--twocol-section--33-67 {
         padding: 0;
         & > .layout__region {
             position: relative;
-
-            &--second {
-                padding: 60px 130px 45px 220px;
+            @include breakpoint(laptop){
+                &--second {
+                    padding: 60px 130px 45px 220px;
+                }
             }
         }    
     }

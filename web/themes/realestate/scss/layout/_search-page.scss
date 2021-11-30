@@ -1,0 +1,7 @@
+.block-system {
+
+    .list-group-item {
+        @include paragraphStyle;
+        padding-bottom: 20px;
+    }
+}

@@ -4,7 +4,10 @@
             .block {
                 margin-bottom: 30px;
                 &.categories, &.archive, &.recent-posts {
-                    @include sidebar;
+                    h6 {
+                        @include sidebar;
+                    }
+                    
                 }
 
                 &.recent-posts {

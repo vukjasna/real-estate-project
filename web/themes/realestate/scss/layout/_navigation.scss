@@ -1,22 +1,72 @@
-.navigation {
-    background-color: transparentize($titleColor, 0.2);
+.navigation-menu {
+    background: $greenHover;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+
+    @include breakpoint(tablet){
+        background-color: transparentize($titleColor, 0.2);
+    }
+   
+    h6, a {
+        color: white;
+    }
+
+    h6 {
+        text-transform: uppercase;
+    }
+
     a {
-        color:white;
         font-weight: 600;
         text-transform: uppercase;
         padding:19px;
         display: block
     }
-    .nav {
-        width: 46%;
-        margin: auto;
+
+    .mobile-menu {
+        padding: 20px;
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+
+    .icon {
+        &__bar {
+            width: 30px;
+            height: 4px;
+            display: block;
+            background: white;
+
+            &:nth-child(2) {
+                margin: 5px 0;
+            }
+        }
+    }
+
+    .nav {
+        width: 90%;
+        margin: auto;
+        display: none;
+        text-align: center;
+        flex-direction: column;
+
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        @include breakpoint(laptop){
+            width: 70%;
+        }
+
+        @include breakpoint(desktop){
+            width: 50%;
+        }
     }
 }

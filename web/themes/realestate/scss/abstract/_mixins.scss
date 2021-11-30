@@ -1,6 +1,31 @@
+@mixin breakpoint($point) {
+    @if $point == mobile {
+      @media screen and (min-width: 320px) { @content ; }
+   }
+   @else if $point == tablet {
+      @media screen and (min-width: 768px) { @content ; }
+   }
+   @else if $point == laptop {
+      @media screen and (min-width: 980px) { @content ; }
+   }
+   @else if $point == desktop {
+    @media screen and (min-width: 1200px) { @content ; }
+    }
+}
+
 @mixin maxWidth {
-    max-width: $maxWidth;
     margin: auto;
+    @include breakpoint(tablet) {
+        max-width: 750px;
+    }   
+    
+    @include breakpoint(laptop) {
+        max-width: 970px;
+    }   
+
+    @include breakpoint(desktop) {
+        max-width: 1200px;
+    }   
 }
     
 
@@ -30,9 +55,13 @@
 }
 
 @mixin paragraphStyle {
-    font-size: 14px;
+    font-size: 13px;
     font-family: $montserrat;
     color: $textColor;
+
+    @include breakpoint(desktop) {
+        font-size: 14px;
+    }
 }
 
 @mixin teaserTitles {
@@ -48,4 +77,3 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #CCC;
 }
-

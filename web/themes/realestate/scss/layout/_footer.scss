@@ -1,4 +1,4 @@
-.site-footer{
+.site-footer {
     background: url(../../images/bg-2.jpg) no-repeat center;
     background-size: cover;
     padding:0;
@@ -9,18 +9,31 @@
 
     h6 {
         color:#fefefe;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         text-align: left;
     }
 
     .block {
         margin:0;
         border:none;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+
+        @include breakpoint(laptop) {
+            width: 33%;
+        }
     }
 
     .block-views {
-        width:50%;
+        width: 100%;
         color: #c7c7c7;
+
+        @include breakpoint(tablet){
+            width: 50%;
+        }
     }
 
     .content {
@@ -40,7 +53,17 @@
     padding:110px 0 80px;
     p {
         font-size: 12px;
-        line-height: 1.4em;
+        line-height: 1.6em;
+    }
+
+    .block {
+        &:first-child {
+            padding-bottom:40px;
+
+            @include breakpoint(tablet) {
+                padding-bottom:0;
+            }
+        }
     }
 }
 

@@ -1,16 +1,28 @@
-.logo-block{
+.logo-block {
     @include maxWidth;
     margin-top: 60px;
     .field {
-        width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 115px;
+        flex-wrap: wrap;
         &__item {
             border: 1px solid $lightGray;
             padding: 0 30px;
+            width: 100%;
             img {
                 margin: 0;
+            }
+
+            &:hover {
+                border-color: $greenHover;
+            }
+
+            @include breakpoint(tablet) {
+                width: 33%;
+            }
+
+            @include breakpoint(laptop) {
+                width: 18%;
             }
         }
     }

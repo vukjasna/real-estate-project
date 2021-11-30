@@ -1,16 +1,22 @@
 .contact {
     &--header {
-        width: 60%;
+        display: none;
 
-        .field {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            &__info {
-                flex-direction: column;
-                margin-left: 20px;
-            }    
+        @include breakpoint(laptop){
+            display: block;
+            width: 55%;
+
+            .field {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                &__info {
+                    flex-direction: column;
+                    margin-left: 20px;
+                }    
+            }
         }
+        
     }
 
     &--footer {

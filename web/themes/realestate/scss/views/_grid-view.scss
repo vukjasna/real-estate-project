@@ -1,41 +1,32 @@
-.properties, .blog {
+.properties, .blog, .agents {
     @include maxWidth;
-    padding-bottom: 80px;
 }
 
 .layout-main-wrapper {
-    padding-top: 50px;
+   padding: 100px 0;
 }
 
-.views-row {
-    margin-bottom: 20px;
-}
+.views-view-grid {
+    display: flex;
+    flex-wrap: wrap;
+    .views-row {
+        margin-bottom: 30px;
+        width: 100%;
 
-.grid-view {
-    .views-field {
-        overflow: hidden;
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+
+        @include breakpoint(laptop) {
+            width: 33%;
+        }
     }
 }
+
 
 .grid-item {
     position: relative;
     transition: all 0.5s ease;
-
-    .views-field {
-        &-field-featured-image, &-field-image {
-            height: 235px;
-            overflow: hidden;
-        }
-            
-    
-        &-title, &-name {
-            @include teaserTitles;
-        }
-
-        &-title {
-            display: inline-block;
-        }
-    }
 
     p {
         line-height: 1.6em;
