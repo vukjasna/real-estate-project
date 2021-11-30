@@ -13,19 +13,6 @@
         text-align: left;
     }
 
-    .block {
-        margin:0;
-        border:none;
-        width: 100%;
-
-        @include breakpoint(tablet) {
-            width: 50%;
-        }
-
-        @include breakpoint(laptop) {
-            width: 33%;
-        }
-    }
 
     .block-views {
         width: 100%;
@@ -44,6 +31,12 @@
                 color:$greenHover;
             }
         }
+    }
+
+    .block {
+        margin:0;
+        border:none;
+        width: 100%;
     }
       
 }
@@ -64,6 +57,15 @@
                 padding-bottom:0;
             }
         }
+
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+
+        @include breakpoint(laptop) {
+            width: 33%;
+        }
+
     }
 }
 
@@ -85,6 +87,7 @@
 
     p {
         font-size: 13px;
+        text-align: center;
     }
 
     .content {
