@@ -40,7 +40,7 @@
     }
 
     @include breakpoint(desktop) {
-        @include overlay(linear-gradient(120deg, $greenHover 425px, transparentize($titleColor, 0.2) 426px));
+        @include overlay(linear-gradient(120deg, $greenHover 400px, transparentize($titleColor, 0.2) 401px));
         height: 245px;
     }
 }
@@ -72,7 +72,7 @@
        }
 
        @include breakpoint(desktop) {
-            font-size: 30px;
+            font-size: 28px;
        }
     }
 }
@@ -101,7 +101,7 @@
         }
 
         @include breakpoint(desktop) {
-            font-size: 26px;
+            font-size: 24px;
         }
     }
 }

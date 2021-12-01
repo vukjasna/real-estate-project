@@ -11,7 +11,7 @@
     }
 
     @include breakpoint(desktop) {
-        background: linear-gradient(110deg, transparent 650px, $lightGray 651px), url(../../images/features.png);
+        background: linear-gradient(110deg, transparent 430px, $lightGray 431px), url(../../images/features.png);
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -36,7 +36,7 @@
                 }
 
                 @include breakpoint(desktop){
-                    padding: 60px 130px 45px 220px;
+                    padding: 60px 50px 0px 0px;
                 }
             }
         }    
