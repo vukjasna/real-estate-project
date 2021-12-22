@@ -50,11 +50,7 @@
                     }
                 }
             }
-    
-    
-        }
-
-       
+        }  
 
         .block-search {
             h2 {
@@ -73,7 +69,7 @@
             @include borderCard(left, $greenHover);
             background-color: $lightGray;
             padding: 30px 30px 15px;
-            margin: 25px 30px 30px;
+            margin: 25px 15px 30px;
             position: relative;
             &::after {
                 font-family: fontawesome;
@@ -82,6 +78,10 @@
                 bottom: 10px;
                 content: "\f10e";
                 color: #DDDDDD;
+            }
+
+            @include breakpoint(tablet){
+                margin: 25px 30px 30px;
             }
         }
 

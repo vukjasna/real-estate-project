@@ -1,11 +1,67 @@
 .header #search-block-form, .search-form {
-    display: flex;
     flex-flow: row-reverse nowrap;
     align-items: center;
+
+    .container-inline {
+        display: flex;
+        margin: 15px 0;
+        input[type="submit"] {
+            align-self: flex-end;
+            width: 10%;
+
+            @include breakpoint(laptop) {
+                width: 5%;
+            }
+        }
+    }
 }
+
 
 fieldset {
     border-width: 0;
+    width: 90%;
+    label {
+        padding: 5px 0;
+    }
+}
+
+.search-advanced {
+    border: 1px solid $titleColor;
+    margin: 20px 0;
+
+    summary {
+        padding: 10px 20px;
+    }
+
+    .details-wrapper {
+        padding: 0 30px 30px;
+    }
+
+    .form-submit {
+        background: $greenHover;
+        color: white;
+        text-transform: uppercase;
+        border:none;
+        padding: 5px 30px 6px;
+        font-family: $montserrat;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: $titleColor;
+        }
+    }
+
+    input[type="text"] {
+        height: 30px;
+        width: 100%;
+    }
+
+    fieldset {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 .form-search {
@@ -13,10 +69,21 @@ fieldset {
     border-width: 1px;
     padding: 0 15px;
     height: 30px;
-    margin-left: 10px;
     font-size: 14px;
     font-family: $montserrat;
+    width: 100%;
+
+    &:focus-visible {
+        outline: 1px solid $greenHover;
+        border-color: $greenHover;
+    }
 }  
+
+.form-row {
+    .form-actions {
+        align-self: center;
+    }
+} 
 
 input[value="Search"] {
     font-size: 0;

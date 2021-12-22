@@ -1,25 +1,75 @@
 .region-banner {
     .iframe-field {
-        height: 610px;
+        height: 280px;
         overflow: hidden;
-        & > div {
-            @include overlay($backgroundOverlay);
-            width: 100%;
-            /* Keep it the right aspect-ratio */
-            aspect-ratio: 16/9;
-            /* No clicking/hover effects */
-            pointer-events: none;
-            transform:translateY(-20%);
+
+        +.title-block {
+            top: 40%;
+            left: 5%;
+            width: 90%;
+    
+            @include breakpoint(tablet){
+                top: 35%;
+                left: 10%;
+                width: 80%;
+            }
+    
+            @include breakpoint(laptop){
+                top: 40%;
+            }
         }
 
+        & > div {
+            @include overlay($bannerOverlay);
+            width: 100%;
+            /* Keep it the right aspect-ratio */
+            aspect-ratio: 1/1;
+            /* No clicking/hover effects */
+            pointer-events: none;
+            position: relative;
+
+            @include breakpoint(tablet){
+                transform:translateY(-20%);
+            }
+
+            @include breakpoint(laptop){
+                aspect-ratio: 16/9;
+            }
+        }
+
+        @include breakpoint(tablet){
+            height: 450px;
+        }
+
+        @include breakpoint(laptop){
+            height: 350px;
+        }
+
+        @include breakpoint(laptop_m){
+            height: 450px;
+        }
+
+
+        @include breakpoint(huge){
+            height: 610px;
+        }
     }
 
     .banner-button {
         position:absolute;
-        top:60%;
+        top:70%;
         width: 100%;
         display: flex;
         justify-content: center;
+
+        @include breakpoint(tablet) {
+            top:60%;
+        }
+
+        @include breakpoint(huge) {
+            top:55%;
+        }
+
 
         a {
             @include whiteBtn;

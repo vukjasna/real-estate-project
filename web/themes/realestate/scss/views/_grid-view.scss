@@ -16,6 +16,10 @@
 }
 
 .properties, .block-views-blockblog-view-block-1 {
+    p {
+        text-align: left;
+    }
+    
     .views-row {
         @include breakpoint(tablet) {
             width: 50%;

@@ -35,5 +35,14 @@
                 padding-left: 20px;
             }
         }
+
+        .block-block-content99582b41-2342-481e-9dfe-36c97230d23f {
+            width: 80%;
+            margin: auto;
+
+            @include breakpoint(tablet){
+                width: 100%;
+            }
+        }
     }
 }

@@ -35,13 +35,22 @@
     }
 
     @include breakpoint(laptop) {
-        @include overlay(linear-gradient(120deg, $greenHover 270px, transparentize($titleColor, 0.2) 27px));
         height: 160px;
+    }
+
+    @include breakpoint(laptop_m) {
+        @include overlay(linear-gradient(120deg, $greenHover 270px, transparentize($titleColor, 0.2) 27px));
+        height: 200px;
     }
 
     @include breakpoint(desktop) {
         @include overlay(linear-gradient(120deg, $greenHover 400px, transparentize($titleColor, 0.2) 401px));
-        height: 245px;
+        height: 190px;
+    }
+
+    @include breakpoint(huge) {
+        @include overlay(linear-gradient(120deg, $greenHover 400px, transparentize($titleColor, 0.2) 401px));
+        height: 230px;
     }
 }
 
@@ -67,8 +76,8 @@
        line-height: 1.4em;
        font-size: 16px;
 
-       @include breakpoint(laptop) {
-            font-size: 20px;
+       @include breakpoint(laptop_m) {
+            font-size: 22px;
        }
 
        @include breakpoint(desktop) {
@@ -97,11 +106,19 @@
         }
 
         @include breakpoint(laptop) {
-            font-size: 18px;
+            font-size: 17px;
+        }
+
+        @include breakpoint(laptop_m) {
+            font-size: 22px;
         }
 
         @include breakpoint(desktop) {
-            font-size: 24px;
+            font-size: 25px;
+        }
+
+        @include breakpoint(huge) {
+            font-size: 27px;
         }
     }
 }

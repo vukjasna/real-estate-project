@@ -17,17 +17,25 @@
     .breadcrumb-block {
         position: absolute;
         bottom: 10px;
-        left: 18%;
+        left: 4%;
         a {
             color: #B3B3B3;
             text-transform: uppercase;
             font-family: $montserrat;
             font-weight: 600;
         }
+
+        @include breakpoint(laptop_m){
+            left: 9%;
+        }
+
+        @include breakpoint(huge){
+            left: 18%;
+        }
     }
 
     .field--type-image {
-        @include overlay($backgroundOverlay);
+        @include overlay($bannerOverlay);
         height: 433px;
         overflow: hidden;
         

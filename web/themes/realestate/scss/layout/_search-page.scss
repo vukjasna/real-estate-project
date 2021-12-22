@@ -1,7 +1,22 @@
-.block-system {
+.search-page {
+    .layout-main-wrapper {
+        @include maxWidth;
+    }
+   
+    .block-system {
+        width: 90%;
+        margin: auto;
+        .list-group-item {
+            @include paragraphStyle;
+            padding: 30px;
+            border: 1px solid $titleColor;
+            margin-top: 20px;
 
-    .list-group-item {
-        @include paragraphStyle;
-        padding-bottom: 20px;
+            h4 {
+                padding-bottom: 15px;
+            }
+        }
     }
 }
+
+

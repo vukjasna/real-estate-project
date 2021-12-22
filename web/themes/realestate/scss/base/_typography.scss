@@ -5,17 +5,38 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 28px;
     color:white;
+    width: 90%;
+    margin:auto;
+
+    @include breakpoint(tablet){
+        font-size: 40px;
+    }
 }
 
-
 h2 {
-    font-size: 48px;   
+    font-size: 26px; 
+
+    @include breakpoint(tablet){
+        font-size: 40px; 
+    }   
+
+    @include breakpoint(laptop_m){
+        font-size: 48px; 
+    }  
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 24px;
+
+    @include breakpoint(tablet){
+        font-size: 36px; 
+    }   
+
+    @include breakpoint(laptop_m) {
+        font-size: 30px;
+    }
 }
 
 h4 {
@@ -40,9 +61,16 @@ li {
     list-style-type: none;
 }
 
-p, blockquote, .field--name-created {
+p, blockquote, .field--name-created, label, .fieldset-legend, summary {
     @include paragraphStyle;
     line-height: 1.7em;
+    text-align: left;
+}
+
+.fieldset-legend {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 0;
 }
 
 strong {

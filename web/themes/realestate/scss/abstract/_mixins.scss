@@ -8,9 +8,15 @@
    @else if $point == laptop {
       @media screen and (min-width: 980px) { @content ; }
    }
-   @else if $point == desktop {
+   @else if $point == laptop_m {
     @media screen and (min-width: 1200px) { @content ; }
-    }
+   }
+   @else if $point == desktop {
+    @media screen and (min-width: 1400px) { @content ; }
+   }
+   @else if $point == huge {
+    @media screen and (min-width: 1500px) { @content ; }
+   }
 }
 
 @mixin maxWidth {
@@ -23,7 +29,7 @@
         max-width: 970px;
     }   
 
-    @include breakpoint(desktop) {
+    @include breakpoint(laptop_m) {
         max-width: 1200px;
     }   
 }
@@ -40,6 +46,11 @@
     border:1px solid white;
     padding: 9px 12px 10px;
     display: block;
+    font-size:12px;
+
+    @include breakpoint(tablet){
+        font-size: 16px;
+    }
 }
 
 @mixin overlay($background) {

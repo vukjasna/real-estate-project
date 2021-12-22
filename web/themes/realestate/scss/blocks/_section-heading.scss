@@ -13,11 +13,16 @@
                 font-size: 30px;
             }
         }
+        
     }
 
     &-field-blockblock-contentbasicbody {
         width: 85%;
         margin: 0 auto 55px;
+
+        p {
+            text-align: center;
+        }
         
         @include breakpoint(tablet) {
             width: 60%;

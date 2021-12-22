@@ -6,7 +6,19 @@
     flex-wrap: wrap;
 }
 
-@media screen and (min-width:640px) {
+.layout--three-columns-with-sidebar {
+    .column-one {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .column-two {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width:980px) {
     .layout--three-columns-with-sidebar {
         .column-one {
             flex: 1 1 67%;

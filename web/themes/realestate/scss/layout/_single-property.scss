@@ -2,7 +2,7 @@
     &--three-columns-with-sidebar {
         padding-bottom: 80px;
         .layout__region {
-            padding: 0 15px;
+            padding-right: 15px;
             
             &--top_left, &--top_right {
                 h6 {
@@ -74,6 +74,32 @@
 
                 .teaser {
                     margin: 0;
+                }
+
+                .block-views-blockfeatured-property-sidebar-block-1 {
+                    .view-content {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        .grid-item {
+                            width: 100%;
+                            &:last-child {
+                                display: none;
+                                @include breakpoint(laptop){
+                                    display: block;
+                                }
+                            }
+
+                            @include breakpoint(tablet){
+                                width: 48%;
+                            }
+
+                            @include breakpoint(laptop){
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             }
         }
